@@ -10,13 +10,27 @@ import lombok.Getter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-@Configuration
-@AllArgsConstructor
+/**
+ * Configuration class for setting up notification strategies.
+ *
+ * This class defines a bean that creates a map of notification types to their corresponding
+ * notification strategies, based on a list of available strategies.
+ */
 @Getter
+@AllArgsConstructor
+@Configuration
 public class StrategyConfig {
 
+  /**
+   * A list of available notification strategies.
+   */
   private final List<NotificationStrategy> notificationStrategies;
 
+  /**
+   * Creates a map of notification types to their corresponding notification strategies.
+   *
+   * @return a map of notification types to notification strategies
+   */
   @Bean
   public Map<NotificationType, NotificationStrategy> sendNotificationByType() {
     Map<NotificationType, NotificationStrategy> messagesByType = new EnumMap<>(

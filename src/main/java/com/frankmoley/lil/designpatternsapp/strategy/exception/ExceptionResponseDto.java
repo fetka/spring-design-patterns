@@ -6,10 +6,10 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.http.HttpStatus;
 
-@Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
+@Data
 public class ExceptionResponseDto {
   private String message;
   private HttpStatus status;

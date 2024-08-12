@@ -7,7 +7,8 @@ import org.springframework.stereotype.Component;
 
 @Slf4j
 @Component
-public class SiteNotificationStrategy implements NotificationStrategy {
+public class SiteNotificationStrategy extends NotificationStrategy {
+
   @Override
   public void sendMessage(String message) {
     log.info("message send to site" + message);

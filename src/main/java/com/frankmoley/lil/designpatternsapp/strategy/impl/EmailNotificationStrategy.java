@@ -7,7 +7,8 @@ import org.springframework.stereotype.Component;
 
 @Slf4j
 @Component
-public class EmailNotificationStrategy implements NotificationStrategy {
+public class EmailNotificationStrategy extends NotificationStrategy {
+
   @Override
   public void sendMessage(String message) {
     log.info("message send to email" + message);

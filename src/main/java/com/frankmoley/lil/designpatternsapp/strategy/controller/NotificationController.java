@@ -13,9 +13,9 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.HttpClientErrorException;
 
-@RestController
-@RequestMapping("/")
 @AllArgsConstructor
+@RequestMapping("/")
+@RestController
 public class NotificationController {
 
   private final NotificationContext notificationContext;

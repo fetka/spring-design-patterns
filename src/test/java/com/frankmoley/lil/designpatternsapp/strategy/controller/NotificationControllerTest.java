@@ -7,16 +7,19 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import com.frankmoley.lil.designpatternsapp.DesignPatternsAppApplication;
 import com.frankmoley.lil.designpatternsapp.strategy.enums.NotificationType;
 import org.junit.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
 import org.springframework.http.MediaType;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
 @RunWith(SpringRunner.class)
+@ExtendWith(SpringExtension.class)
 @SpringBootTest(webEnvironment = WebEnvironment.MOCK, classes = DesignPatternsAppApplication.class)
 @AutoConfigureMockMvc
 public class NotificationControllerTest {

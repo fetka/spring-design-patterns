@@ -2,10 +2,13 @@ package com.frankmoley.lil.designpatternsapp.strategy;
 
 import com.frankmoley.lil.designpatternsapp.strategy.enums.NotificationType;
 
-public interface NotificationStrategy {
+public abstract class NotificationStrategy {
 
-  void sendMessage(String message);
+  public void sendMessage(String message){}
 
-  NotificationType notificationType();
+  public NotificationType notificationType(){
+    return null;
+  }
+
 
 }
